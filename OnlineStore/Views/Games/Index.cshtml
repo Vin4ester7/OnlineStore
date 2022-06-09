@@ -1,0 +1,65 @@
+﻿@using OnlineStore.Models
+@model Game
+
+<html>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div>
+					<h2>@Model.Name</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-6">
+					<img src="@Model.Image" style="width: 550px; height: 350px"/>
+				</div>
+
+				<div class="p-4 mb-3 bg-light rounded" style="height: 350px">
+					<div class="container">
+						<ul>
+							<li>
+								<img src="~/icon/check.png" style="width: 22px; height: 22px" />
+								<span>Наличие:</span>
+								<span><font color="#FFBF00">много</font></span>
+							</li>
+							<li>
+								<img src="~/icon/region.png" style="width: 22px; height: 22px" />
+								<span>Доступно:</span>
+								<span><font color="#FFBF00">во всех странах</font></span>
+							</li>
+							<li>
+								<img src="~/icon/key.png" style="width: 22px; height: 22px" />
+								<span>Лицензионный</span>
+								<span><font color="#FFBF00">ключ</font></span>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+			<div class="col-lg">
+				<div class="row">
+					<h2>@Model.Price.ToString("c")</h2>
+				</div>
+				<div class="row">
+					<a type="button" class="btn btn-lg btn-primary w-100 mx-0 mb-2" asp-controller="Games" asp-action="Payment" asp-route-id="@Model.Id" asp-route-tableName="@Model.ShortDesc">Купить</a>
+				</div>
+			</div>
+			</div>
+
+				<div class="col-7">
+					<h1>Описание</h1>
+					<p>@Model.LongDesc</p>
+				</div>
+			</div>
+
+			<div class="row">
+			@if (User?.Identity?.Name == "admin")
+			{
+				<a type="button" class="btn btn-lg btn-primary w-100 mx-0 mb-2" asp-controller="Games" asp-action="AddOrEdit" asp-route-id="@Model.Id">Изменить товар</a>
+				<a type="button" class="btn btn-lg btn-danger w-100 mx-0 mb-2" asp-controller="Games" asp-action="Delete" asp-route-id="@Model.Id">Удалить товар</a>
+			}
+			</div>
+		</div>
+	</body>
+
+</html>

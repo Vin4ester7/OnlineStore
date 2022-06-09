@@ -1,0 +1,25 @@
+﻿@using OnlineStore.Models
+@model List<Game>
+
+<html>
+	<body>
+			@{
+				foreach(var game in Model) {
+					<a asp-controller="Games" asp-action="Game" asp-route-id="@game.Id" asp-route-tableName="@game.ShortDesc" />
+					<div class="container" style="width: 1000px; height: 280px;">
+						<div class="row">
+							<div class="col-lg">
+								<img src=@game.Image />
+							</div>
+
+							<div class="col-lg">
+								<h1>@game.Name</h1>
+								<h4>@game.ShortDesc</h4>
+								<h3>@game.Price.ToString("c")</h3>
+							</div>
+						</div>
+					</div>
+				}
+			}
+	</body>
+</html>

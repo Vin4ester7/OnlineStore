@@ -1,0 +1,290 @@
+﻿@using OnlineStore.Models
+@model Game
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <title>PlayTime</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+</head>
+
+<body>
+    <!-- Карусель -->
+    <section class="slider_section">
+        <div class="banner_main">
+            <div class="container-fluid padding3">
+                <div id="myCarousel" class="carousel slide banner_Client" data-ride="carousel">
+                    <ol class="carousel-indicators" style="margin-left: 65px; margin-bottom: -45px">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="container">
+                                <div class="carousel-caption text">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="img_bg">
+                                                <figure><a href="~/Games/Russian/1"><img src="~/images/smyta.jpeg"/></a></figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="carousel-caption text">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="img_bg">
+                                                <figure><a href="~/Games/Zombies/1"><img src="~/images/7DTD.png"/></a></figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="container">
+                                <div class="carousel-caption text">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="img_bg">
+                                                <figure><a href="~/Games/Strategy/1"><img src="~/images/Civa6.jpg" /></a></figure>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Карусель -->
+
+    <!-- Категории -->
+    <div class="Categories">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="title">
+                        <h2> Категории</h2>
+                        <ul class="categiri">
+                            <li><a asp-controller="Games" asp-action="Zombies"><img class="img_categiri" src=~/icon/zombie.png />Зомби</a></li>
+                            <li><a asp-controller="Games" asp-action="Adventure"><img class="img_categiri" src=~/icon/adv.png />Приключения</a></li>
+                            <li><a asp-controller="Games" asp-action="Survival"><img class="img_categiri" src=~/icon/surv.png />Выживание</a></li>
+                            <li><a asp-controller="Games" asp-action="Strategy"><img class="img_categiri" src=~/icon/strategy.png />Стратегии</a></li>
+                            <li><a asp-controller="Games" asp-action="Fighting"><img class="img_categiri" src=~/icon/fight.png />Файтинги</a></li>
+                            <li><a asp-controller="Games" asp-action="Horror"><img class="img_categiri" src="~/icon/horror.png" />Хорроры</a></li>
+                            <li><a asp-controller="Games" asp-action="Shooters"><img class="img_categiri" src="~/icon/shooters.png" />Шутеры</a></li>
+                            <li><a asp-controller="Games" asp-action="Russian"><img class="img_categiri" src="~/icon/russian.png" />Русские</a></li>
+                         </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Зомби -->
+            <div id="brand"  class="brand-bg">
+                <h3>ЗОМБИ</h3>
+                <div class="row">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
+                        <div class="brand-box">
+                            <h5>Скидка</h5>
+                            <i><img src="~/images/7DTD.png"/></i>
+                        </div>
+                        <a class="buynow" href="Games/Zombies/1">499₽</a>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
+                        <div class="brand-box">
+                            <i><img src="~/images/l4d2.jpeg" /></i>
+                        </div>
+                        <a class="buynow" href="Games/Zombies/2">259₽</a>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="brand-box">
+                            <i><img src="~/images/dyinglight.jpeg"/></i>
+                        </div>
+                        <a class="buynow" href="Games/Zombies/3">1499₽</a>
+                    </div>
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="brand-box">
+                            <i><img src="~/images/TWD.jpeg"/></i>
+                        </div>
+                        <a class="buynow" href="Games/Zombies/4">400₽</a>
+                    </div>
+                </div>
+            </div>
+            <a class="seemore" asp-controller="Games" asp-action="Zombies">Больше</a>
+            <!-- Зомби -->
+
+            <!-- Русские -->
+             <div id="shoes" class="brand-bg">
+                 <h3>РУССКИЕ</h3>
+                 <div class="row">
+                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
+                         <div class="brand-box">
+                             <h5>Предзаказ</h5>
+                             <i><img src="~/images/smyta.jpeg"/></i>
+                         </div>
+                         <a class="buynow" href="Games/Russian/1">699₽</a>
+                     </div>
+                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
+                         <div class="brand-box">
+                             <i><img src="~/images/DNFM.jpg"/></i>
+                         </div>
+                         <a class="buynow" href="Games/Russian/2">279₽</a>
+                     </div>
+                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                         <div class="brand-box">
+                             <i><img src="~/images/SpaceRangers.png"/></i>
+                         </div>
+                         <a class="buynow" href="Games/Russian/3">399₽</a>
+                     </div>
+                     <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                         <div class="brand-box">
+                             <i><img src="~/images/Beholder.PNG"/></i>
+                         </div>
+                         <a class="buynow" href="Games/Russian/4">239₽</a>
+                     </div>
+                 </div>
+             </div>
+             <a class="seemore" asp-controller="Games" asp-action-"Russian">Больше</a>
+            <!-- Русские -->
+        </div>
+    </div>
+    <!-- Категории -->
+    
+    <!-- Скидка -->
+    <section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="save">
+                    <div class="row">
+                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                            <div class="save_box">
+                                <h3>Сэкономьте 50%</h3>
+                                <a asp-controller="Home" asp-action="AllGames">Купить сейчас</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section>
+    <!-- Скидка -->
+
+    <!-- Стратегии -->
+    <div class="container" style="margin-top: 100px">
+        <div class="row">
+            <div class="col-md-12">
+                <div id="jewellery" class="brand-bg">
+                    <h3>СТРАТЕГИИ</h3>
+                    <div class="row">
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
+                            <div class="brand-box">
+                                <i><img src="~/images/Civa6.jpg"/></i>
+                            </div>
+                            <a class="buynow" href="Games/Strategy/1">999₽</a>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
+                            <div class="brand-box">
+                                <i><img src="~/images/ThreeKindoms.png"/></i>
+                            </div>
+                            <a class="buynow" href="Games/Strategy/2">1599₽</a>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                            <div class="brand-box">
+                                <i><img src="~/images/KINGS3.jpeg"/></i>
+                            </div>
+                            <a class="buynow" href="Games/Strategy/3">1299₽</a>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                            <div class="brand-box">
+                                <i><img src="~/images/Northgard.jpg"/></i>
+                            </div>
+                            <a class="buynow" href="Games/Strategy/4">499₽</a>
+                        </div>
+                    </div>
+                </div>
+                <a class="seemore" asp-controller="Games" asp-action="Strategy">Больше</a>
+            </div>
+        </div>
+    </div>
+    <!-- Стратегии -->
+
+   <div class="overlay"></div>
+
+    <!-- Javascript файлы-->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery-3.0.0.min.js"></script>
+
+    <!-- sidebar -->
+    <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $("#sidebar").mCustomScrollbar({
+                theme: "minimal"
+            });
+
+            $('#dismiss, .overlay').on('click', function() {
+                $('#sidebar').removeClass('active');
+                $('.overlay').removeClass('active');
+            });
+
+            $('#sidebarCollapse').on('click', function() {
+                $('#sidebar').addClass('active');
+                $('.overlay').addClass('active');
+                $('.collapse.in').toggleClass('in');
+                $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $(".fancybox").fancybox({
+                openEffect: "none",
+                closeEffect: "none"
+            });
+
+            $(".zoom").hover(function() {
+
+                $(this).addClass('transition');
+            }, function() {
+
+                $(this).removeClass('transition');
+            });
+        });
+    </script>
+   </div>
+    <!-- sidebar -->
+</body>
+
+</html>
